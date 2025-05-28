@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: lifesub-web-config
+  namespace: dg0409-lifesub-ns
+data:
+  runtime-env.js: |
+    window.__runtime_config__ = {
+        MEMBER_URL: 'http://dg0409-aks-ingress-address/api/auth',
+        MYSUB_URL: 'http://dg0409-aks-ingress-address/api/mysub',
+        RECOMMEND_URL: 'http://dg0409-aks-ingress-address/api/recommend'
+    };
